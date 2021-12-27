@@ -9,21 +9,57 @@
     
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-content"></div>
+        </nav>
+    </header>
     <main>
-    <h1 id="contador">0</h1>
-    <img src="./img/medialuna.png" class="medialuna" onclick="clic();">
-    <button onclick="comprar(0);">PANADERO (100)</button>
-    <button onclick="comprar(1);">HORNO(300)</button>
+        <div class="section-left">
+            <h2>Inventario:</h2>
+            <div id="inventario"></div>
+        </div>
+        <div class="section-center">
+            <div class="botones">
+                <button>Comprar medialuna</button>
+                <button>Estadisticas</button>
+                <button>Info</button>
+                <button>Reset</button>
+            </div>
+            <div class="quotes">
+                <p id="mensajes">Imagino que estás listo para empezar a hornear las mejores medialunas de la historia. Empezá a clickear!</p>
+            </div>
+        </div>
+        <div class="section-right">
+            <h2>Tienda copada:</h2>
+            <div class="store-content">
+                <button onclick="comprar(0);">Harina (15)</button>
+                <button onclick="comprar(1);">Panadero (100)</button>
+                <button onclick="comprar(2);">HORNO(300)</button>
+            </div>
+        </div>
+        <div class="medialuna-content">
+        <div class="counter">
+            <h1 id="contador">0</h1>
+            <p id="clickCounter"></p>
+        </div>
+        <img src="./img/medialuna.png" class="medialuna" id="medialunita" onclick="audioPlay(); clic();">
+        </div>
+        <section>
+        <div class="set">
+            <div><img src="./img/falling-medialuna.png"></div>
+            <div><img src="./img/falling-medialuna2.png"></div>
+            <div><img src="./img/falling-medialuna3.png"></div>
+            <div><img src="./img/falling-medialuna4.png"></div>
+        </div>
+        </section>
+        <!-- 
 
-    <div id="inventario"></div>
-    <br>
-    <p>Primer prototipo del juego Medialunas Clicker. El objetivo de este juego es tan sencillo como su
-        existencia: Tenes que clickear la medialuna y el contador irá en aumento. 
-        Podes comprar objetos
-        (en este caso un panadero o un horno) para aumentar su produccion por segundo
-        El panadero aumenta en 2 su produccion por segundo y el horno aumenta en 4 su prod por segundo.
-    </p>
-</main>
+        <button onclick="comprar(0);">PANADERO (100)</button>
+        <button onclick="comprar(1);">HORNO(300)</button>
+
+         -->
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>

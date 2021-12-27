@@ -1,31 +1,254 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+html {
+    height: 100%;
+    font-family: 'Amatic SC', cursive;
 }
 
-.medialuna {
+
+body {
+    background: rgb(196, 154, 123);
+}
+
+/* Nav bar */
+
+.nav-content {
+    width: 100%;
+    height: 79px;
+    border-radius: 30px;
+
+    background-image: url(./img/wood-texture2.jpg);
+    background-size: 50%;
+    border: 2px solid #130e1d;
+}
+
+/* Sections*/
+
+.section-left {
+    position: absolute;
+    width: 199px;
+    height: 500px;
+    margin-top: 1em;
+    background-image: url(./img/woodd-texture.jpg);
+    background-size: 60%;
+    border-radius: 30px;
+    border: 2px solid #000000;
+    z-index: 9
+
+}
+
+.section-left h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.3em;
+    color: wheat;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+
+
+#inventario {
+    color: wheat;
+    font-size: 1.5em;
+}
+
+.section-center {
+    height: 138px;
+    width: 749px;
+
+    position: absolute;
+    top: 467px;
+    left: 235px;
+    background: #2e1c02ec;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 2px solid #000000;
+    z-index: 9
+}
+
+
+section .set {
+    display: block;
     height: 200px;
-    width: 200px;
-    cursor: pointer;
-    padding: 2em;
+    width: 00px;
+    pointer-events: none;
 }
 
-button {
-    cursor: pointer;
-    margin: 1em;
+section img {
+    position: relative;
+    top: 120px;
+    height: 120px;
+    width: 120px;
+    opacity: 0.3;
 }
 
-main {
+section .set div {
+    position: absolute;
+    display: block;
+}
+
+section .set div:nth-child(1){
+    left: 60%;
+    animation: animate 5s linear infinite;
+    animation-delay: -7s;
+}
+
+section .set div:nth-child(2){
+    left: 40%;
+    animation: animate 5s linear infinite;
+    animation-delay: -5s;
+}
+
+section .set div:nth-child(3){
+    top: 90%;
+    left: 20%;
+    animation: animate 7s linear infinite;
+    animation-delay: 0s;
+}
+
+section .set div:nth-child(4){
+    left: 35%;
+    animation: animate 10s linear infinite;
+    animation-delay: -5s;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        opacity: 0;
+        top: -10%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    20%
+    {
+        transform: translateX(-50px) rotate(45deg);
+    }
+    40%
+    {
+        transform: translateX(-20px) rotate(90deg);
+    }
+    60%
+    {
+        transform: translateX(-34px) rotate(180deg);
+    }
+    80%
+    {
+        transform: translateX(-20px) rotate(180deg);
+    }
+    100%
+    {
+        top: 70%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+.section-right {
+    position: absolute;
+    width: 309px;
+    height: 500px;
+    margin-top: 1em;
+    margin-left: 62.5em;
+    background-image: url(./img/wood-texture3.jpg);
+    background-size: 60%;
+    border-radius: 30px;
+    border: 2px solid #000000;
+    
+
+}
+
+.section-right h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.3em;
+    background: -webkit-linear-gradient(rgb(255, 214, 127), rgb(255, 174, 74));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    border: 2px solid rgba(255,174,0,1);
+    width: 7em;
+    margin-left: 0.8em;
+    border-radius: 0.5em;
+    
+}
+
+.store-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    margin: 5em;
 }
 
-p {
-    padding: 5em;
+
+.medialuna {
+    height: 150px;
+    width: 180px;
+    cursor: pointer;
+    z-index: 9;
+    transition: all .1s ease-in-out;
+}
+
+.medialuna:hover {
+    transform: scale(1.1);
+}
+
+.medialuna:active {
+    transform: scale(0.8);
+  }
+
+h1 {
+    background: rgba(0, 0, 0, 0.192);
+    width: 16em;
     text-align: center;
+    pointer-events: none;
+}
+
+  .counter {
+    color: white;
+    font-size: 1.5em;
+    z-index: 9;
+}
+
+.medialuna-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 6em;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.botones button {
+    width: 15em;
+    height: 2em;
+
+    font-family: 'Amatic SC', cursive;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    background: rgb(112, 58, 38);
+
+    border: none;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background: rgb(87, 43, 27);
+}
+
+.quotes {
+    color: white;
+
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
 }
